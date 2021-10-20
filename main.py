@@ -370,7 +370,7 @@ def makeautomata(f, n):
         string = string + "is False"
         print(string)
 
-if _name_ == '_main_':
+if __name__ == '__main__':
     x1 = Int('x1')
     x2 = Int('x2')
     x3 = Int('x3')
