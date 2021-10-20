@@ -11,6 +11,7 @@ def getList(f)
 input : f: takes input string of z3 formula
 output : creates list of atomic formulas
 
+#this function on execution takes value from user for all variables.
 def compute(f, n, lst)
 input : f: takes input string of z3 formula,n: total no. of variables,lst: list of value of variables given in input
 output : compute the satisfiability for given values
@@ -42,4 +43,4 @@ output : displays pretty table by applying 'and'/'or' operation
 __name__ == '__main__': 
 string is variable in which z3 formula needs to be passed
 arg1 is total number of variables taken from user as an input. 
-#for demo currently "And(x1 <= 2, x1 + x2 <= 5)" is passed in string ,that can be changed to whatsoever z3 formula we want and by declaring x1,x2,..variables there.
+#for demo currently "And(x1 <= 2, x1 + x2 <= 5)" is passed in string ,that can be changed to whatsoever z3 formula we want and by declaring x1,x2,..variables there,and pass total number of variables.
