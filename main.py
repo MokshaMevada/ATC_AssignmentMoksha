@@ -373,7 +373,6 @@ def makeautomata(f, n):
 if __name__ == '__main__':
     x1 = Int('x1')
     x2 = Int('x2')
-    x3 = Int('x3')
     string = "And(x1 <= 2, x1 + x2 <= 5)"
     arg1 = int(input())
     f = eval(string)
