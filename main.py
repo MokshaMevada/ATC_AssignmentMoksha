@@ -16,13 +16,6 @@ def total_vars(n):
         unknown_var.append(eval('x'+str(i)))
 
 
-def realvars(f, n):
-    if f in unknown_var:
-        actualvariable.append(f)
-        return
-    realvars(f.arg(0), n)
-    realvars(f.arg(1), n)
-    return
 
 
 def getList(f):
