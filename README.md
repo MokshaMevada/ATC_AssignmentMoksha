@@ -33,8 +33,12 @@ def notop(matrix1):
 input: matrix1 is dictionary which had stored automata
 output: displays pretty table by applying 'not' operation
 
+
 def andorop(check, arg1, matrix1, matrix2):
 input: check is variable which check whether operator is 'and'/'or' ,arg1 : total vars present,matrix1/ matrix2 is automata stored in dictionary for atomic formula1/atomic formula2 between which And/Or operation is to performed.
 output : displays pretty table by applying 'and'/'or' operation
 
 
+__name__ == '__main__': 
+string is variable in which z3 formula needs to be passed
+arg1 is total number of variables taken from user as an input. 
