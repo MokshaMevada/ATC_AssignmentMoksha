@@ -169,7 +169,7 @@ def lessthaneq(f, arg1):
 
             for i in range(0, totalcomb):
                 num1 = num - computation(f.arg(0), arg1, lst[i])
-                l = math.floor(num1/2)
+                l = math.floor(num1 / 2)
                 num1 = num
                 show.append(str(l))
                 row.append(l)
