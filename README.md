@@ -42,3 +42,4 @@ output : displays pretty table by applying 'and'/'or' operation
 __name__ == '__main__': 
 string is variable in which z3 formula needs to be passed
 arg1 is total number of variables taken from user as an input. 
+#for demo currently "And(x1 <= 2, x1 + x2 <= 5)" is passed in string ,that can be changed to whatsoever z3 formula we want and by declaring x1,x2,..variables there.
