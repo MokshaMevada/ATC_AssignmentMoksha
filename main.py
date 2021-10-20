@@ -10,6 +10,26 @@ automata_list = []
 op = []
 unknown_var = []
 
+
+
+def total_vars(n):
+    for i in range(1, n+1):
+        unknown_var.append(eval('x'+str(i)))
+        
+        
+def getList(f):
+    if str(f.decl()) == '<=' or str(f.decl()) == '==':
+        atomic_formulas_list.append(f)
+        return
+    elif str(f.decl()) == 'Not':
+        getList(f.arg(0))
+        op.append(f.decl())
+    else:
+        getList(f.arg(0))
+        getList(f.arg(1))
+        op.append(f.decl())
+        return
+
 def compute(f, n, lst):
     if str(f.decl()) == '<=':
         value = computation(f, n, lst)
@@ -29,13 +49,7 @@ def compute(f, n, lst):
         return compute(f.arg(0), n, lst) or compute(f.arg(1), n, lst)
     elif str(f.decl()) == 'Not':
         return not compute(f.arg(0), n, lst)
-
-def total_vars(n):
-    for i in range(1, n+1):
-        unknown_var.append(eval('x'+str(i)))
-
-
-
+    
 def computation(f, n, lst):
     value = []
     for i in range(0, n):
@@ -46,18 +60,7 @@ def computation(f, n, lst):
     return eval(str(result))
 
 
-def getList(f):
-    if str(f.decl()) == '<=' or str(f.decl()) == '==':
-        atomic_formulas_list.append(f)
-        return
-    elif str(f.decl()) == 'Not':
-        getList(f.arg(0))
-        op.append(f.decl())
-    else:
-        getList(f.arg(0))
-        getList(f.arg(1))
-        op.append(f.decl())
-        return
+
 
 def equate(f, arg1):
     lst = [list(i) for i in itertools.product([0, 1], repeat=arg1)]
