@@ -93,10 +93,13 @@ def equate(f, arg1):
             flag = 0
             dict[num] = 0
             if num == c and initial:
-                show.append(str(num) + 'IF')
+                if num == 0:
+                    show.append(str(num) + 'IF')
+                else:
+                    show.append(str(num) + 'I')
                 flag = 1
                 initial = 0
-            elif num == c:
+            elif num == 0:
                 show.append(str(num) + 'F')
             else:
                 show.append(str(num))
@@ -128,6 +131,7 @@ def equate(f, arg1):
             row.clear()
             print(t)
     return matrix
+
 
 
 def lessthaneq(f, arg1):
